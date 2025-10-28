@@ -1,0 +1,585 @@
+/* Animaciones mejoradas para Angry Birds */
+
+/* Animación de flotar para el fondo */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-20px) rotate(120deg);
+    }
+    66% {
+        transform: translateY(10px) rotate(240deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes wobble {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    15% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    30% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+    45% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+    75% {
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Animación de entrada para la página */
+.page-enter {
+    animation: pageEnter 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.9) rotateX(10deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotateX(0);
+    }
+}
+
+/* Animaciones para botones */
+.nav-btn, .login-btn {
+    animation: bounce 0.6s;
+}
+
+.nav-btn:hover, .login-btn:hover {
+    animation: rubberBand 0.6s;
+}
+
+/* Animaciones específicas para personajes */
+.character-card[data-character="red"]:hover {
+    animation: shake 0.5s;
+}
+
+.character-card[data-character="red"]:hover .character-img {
+    animation: wobble 0.5s;
+}
+
+.character-card[data-character="chuck"]:hover .character-img {
+    animation: bounce 0.6s;
+}
+
+.character-card[data-character="bomb"]:hover .character-img {
+    animation: rubberBand 0.6s;
+}
+
+.character-card[data-character="matilda"]:hover .character-img {
+    animation: float 3s ease-in-out infinite;
+}
+
+.character-card[data-character="blues"]:hover .character-img {
+    animation: bounce 0.3s infinite;
+}
+
+.character-card[data-character="terence"]:hover .character-img {
+    animation: wobble 0.8s;
+}
+
+/* Animación para las noticias */
+.news-card:hover {
+    animation: rubberBand 0.6s;
+}
+
+/* Animación para elementos de timeline */
+.timeline-item {
+    animation-delay: calc(var(--item-index) * 0.2s);
+}
+
+.timeline-item:nth-child(1) { --item-index: 1; }
+.timeline-item:nth-child(2) { --item-index: 2; }
+.timeline-item:nth-child(3) { --item-index: 3; }
+.timeline-item:nth-child(4) { --item-index: 4; }
+.timeline-item:nth-child(5) { --item-index: 5; }
+.timeline-item:nth-child(6) { --item-index: 6; }
+.timeline-item:nth-child(7) { --item-index: 7; }
+.timeline-item:nth-child(8) { --item-index: 8; }
+
+/* Efecto de brillo para elementos interactivos */
+.glow-on-hover {
+    position: relative;
+}
+
+.glow-on-hover::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-red), var(--primary-yellow), var(--primary-blue), var(--primary-green));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.glow-on-hover:hover::after {
+    opacity: 1;
+    animation: glow 1.5s linear infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: blur(5px);
+        opacity: 0.8;
+    }
+    50% {
+        filter: blur(10px);
+        opacity: 0.4;
+    }
+}
+
+/* Animación de partículas para el fondo */
+.particle {
+    position: absolute;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Efecto de tipo de máquina de escribir */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid var(--primary-yellow);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-yellow) }
+}
+
+/* Animación de carga */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary-dark);
+    border-top: 5px solid var(--primary-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Efecto de confeti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-yellow);
+    opacity: 0;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Transiciones suaves mejoradas */
+* {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efecto de parallax */
+.parallax {
+    transform-style: preserve-3d;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Animación de respiración para elementos importantes */
+.breathe {
+    animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Efecto de neón para textos */
+.neon-text {
+    color: var(--primary-yellow);
+    text-shadow: 
+        0 0 5px var(--primary-yellow),
+        0 0 10px var(--primary-yellow),
+        0 0 20px var(--primary-red),
+        0 0 40px var(--primary-red);
+    animation: neon-flicker 2s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            0 0 5px var(--primary-yellow),
+            0 0 10px var(--primary-yellow),
+            0 0 20px var(--primary-red),
+            0 0 40px var(--primary-red);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* Animaciones específicas para el sistema de cartas */
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes flipOutY {
+    from {
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes cardBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 215, 64, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 215, 64, 0.8);
+    }
+}
+
+@keyframes shakeX {
+    from, to {
+        transform: translate3d(0, 0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* Animaciones para las cartas de personajes */
+.card-flip-enter {
+    animation: flipInY 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.card-flip-exit {
+    animation: flipOutY 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.character-card:hover .card-front {
+    animation: cardBounce 0.6s ease;
+}
+
+.character-card.flipped {
+    animation: glowPulse 2s infinite;
+}
+
+/* Animaciones específicas por personaje al hacer flip */
+.character-card[data-character="red"].flipped .card-back {
+    animation: shakeX 0.5s ease;
+}
+
+.character-card[data-character="chuck"].flipped .card-back {
+    animation: tada 0.6s ease;
+}
+
+.character-card[data-character="bomb"].flipped .card-back {
+    animation: rubberBand 0.6s ease;
+}
+
+.character-card[data-character="matilda"].flipped .card-back {
+    animation: bounce 0.6s ease;
+}
+
+.character-card[data-character="blues"].flipped .card-back {
+    animation: wobble 0.6s ease;
+}
+
+.character-card[data-character="terence"].flipped .card-back {
+    animation: shakeX 0.8s ease;
+}
+
+/* Animación para las barras de estadísticas */
+.stat-fill {
+    animation: fillBar 1.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0% !important;
+    }
+    to {
+        width: attr(style) !important;
+    }
+}
+
+/* Animación para el contenido de la carta trasera */
+.back-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.back-content h3 { animation-delay: 0.1s; }
+.character-stats { animation-delay: 0.2s; }
+.character-details { animation-delay: 0.3s; }
+.close-btn { animation-delay: 0.4s; }
+
+/* Efecto de partículas al hacer flip */
+.flip-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    animation: particlePop 0.6s ease-out forwards;
+}
+
+@keyframes particlePop {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translate(var(--tx), var(--ty));
+        opacity: 0;
+    }
+}
+
+/* Animación para el hint de click */
+.click-hint {
+    animation: hintPulse 2s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Efecto de zoom suave para cartas activas */
+.character-card.zoomed {
+    transform: scale(1.1);
+    z-index: 20;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animación de entrada para las cartas */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotateY(180deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+    }
+}
+
+.character-card {
+    animation: cardEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Nido - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animaciones.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="logo-container">
+            <h1 class="logo">El <span>Nido</span></h1>
+            <p class="tagline">Fan Page de Angry Birds</p>
+        </div>
+        
+        <nav>
+            <button class="nav-btn active" onclick="navigateTo('inicio.html')">Inicio</button>
+            <button class="nav-btn" onclick="navigateTo('franquicia.html')">Franquicia</button>
+            <button class="nav-btn" onclick="navigateTo('curiosidades.html')">Curiosidades</button>
+            <button class="nav-btn" onclick="navigateTo('peliculas.html')">Películas y Series</button>
+            <button class="nav-btn" onclick="navigateTo('juegos-especiales.html')">Juegos Especiales</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>¡Bienvenido a El Nido!</h2>
+                <p>El lugar definitivo para los fans de Angry Birds</p>
+            </div>
+        </section>
+
+        <section class="characters-section">
+            <h2>Conoce a la Bandada</h2>
+            <p class="section-subtitle">Haz clic en cualquier pájaro para descubrir sus secretos</p>
+            
+            <div class="characters-grid">
+                <!-- Red -->
+                <div class="character-card" data-character="red">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-img-container">
+                                <img src="images/characters/red.png" alt="Red" class="character-img" onerror="handleImageError(this, 'red')">
+                            </div>
+                            <div class="character-info">
+                                <h3>Red</h3>
+                                <p>El líder serio y determinado</p>
+                                <div class="click-hint">¡Haz clic para más info!</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Red</h3>
+                                <div class="character-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Fuerza:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Velocidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Habilidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="character-details">
+                                    <p><strong>Habilidad Especial:</strong> Vuelo directo y preciso</p>
+                                    <p><strong>Personalidad:</strong> Líder natural, serio y responsable</p>
+                                    <p><strong>Curiosidad:</strong> Tiene problemas de temperamento pero es muy leal</p>
+                                </div>
+                                <button class="close-btn">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chuck -->
+                <div class="character-card" data-character="chuck">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-img-container">
+                                <img src="images/characters/chuck.png" alt="Chuck" class="character-img" onerror="handleImageError(this, 'chuck')">
+                            </div>
+                            <div class="character-info">
+                                <h3>Chuck</h3>
+                                <p>El pájaro más rápido</p>
+                                <div class="click-hint">¡Haz clic para más info!</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Chuck</h3>
+                                <div class="character-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Fuerza:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 50%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Velocidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Habilidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="character-details">
+                                    <p><strong>Habilidad Especial:</strong> Aceleración supersónica</p>
+                                    <p><strong>Personalidad:</strong> Hiperactivo y siempre en movimiento</p>
+                                    <p><strong>Curiosidad:</strong> Puede alcanzar velocidades increíbles en segundos</p>
+                                </div>
+                                <button class="close-btn">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bomb -->
+                <div class="character-card" data-character="bomb">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-img-container">
+                                <img src="images/characters/bomb.png" alt="Bomb" class="character-img" onerror="handleImageError(this, 'bomb')">
+                            </div>
+                            <div class="character-info">
+                                <h3>Bomb</h3>
+                                <p>Explosivo pero amigable</p>
+                                <div class="click-hint">¡Haz clic para más info!</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Bomb</h3>
+                                <div class="character-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Fuerza:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Velocidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Habilidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="character-details">
+                                    <p><strong>Habilidad Especial:</strong> Explosión controlada</p>
+                                    <p><strong>Personalidad:</strong> Paciente pero con mal genio</p>
+                                    <p><strong>Curiosidad:</strong> Su explosión puede destruir estructuras completas</p>
+                                </div>
+                                <button class="close-btn">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matilda -->
+                <div class="character-card" data-character="matilda">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-img-container">
+                                <img src="images/characters/matilda.png" alt="Matilda" class="character-img" onerror="handleImageError(this, 'matilda')">
+                            </div>
+                            <div class="character-info">
+                                <h3>Matilda</h3>
+                                <p>La inteligente del grupo</p>
+                                <div class="click-hint">¡Haz clic para más info!</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Matilda</h3>
+                                <div class="character-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Fuerza:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Velocidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Habilidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="character-details">
+                                    <p><strong>Habilidad Especial:</strong> Lanzamiento de huevos explosivos</p>
+                                    <p><strong>Personalidad:</strong> Práctica y con soluciones creativas</p>
+                                    <p><strong>Curiosidad:</strong> Es la más estratégica de la bandada</p>
+                                </div>
+                                <button class="close-btn">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Blues -->
+                <div class="character-card" data-character="blues">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-img-container">
+                                <img src="images/characters/blues.png" alt="The Blues" class="character-img" onerror="handleImageError(this, 'blues')">
+                            </div>
+                            <div class="character-info">
+                                <h3>The Blues</h3>
+                                <p>Los trillizos divertidos</p>
+                                <div class="click-hint">¡Haz clic para más info!</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>The Blues</h3>
+                                <div class="character-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Fuerza:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Velocidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Habilidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="character-details">
+                                    <p><strong>Habilidad Especial:</strong> Triplicación en el aire</p>
+                                    <p><strong>Personalidad:</strong> Divertidos y sincronizados</p>
+                                    <p><strong>Curiosidad:</strong> Jake, Jim y Jay actúan siempre en perfecta armonía</p>
+                                </div>
+                                <button class="close-btn">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terence -->
+                <div class="character-card" data-character="terence">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="character-img-container">
+                                <img src="images/characters/terence.png" alt="Terence" class="character-img" onerror="handleImageError(this, 'terence')">
+                            </div>
+                            <div class="character-info">
+                                <h3>Terence</h3>
+                                <p>El gigante misterioso</p>
+                                <div class="click-hint">¡Haz clic para más info!</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Terence</h3>
+                                <div class="character-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Fuerza:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Velocidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 30%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Habilidad:</span>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="character-details">
+                                    <p><strong>Habilidad Especial:</strong> Impacto devastador</p>
+                                    <p><strong>Personalidad:</strong> Silencioso pero poderoso</p>
+                                    <p><strong>Curiosidad:</strong> Es el pájaro más grande y fuerte de la bandada</p>
+                                </div>
+                                <button class="close-btn">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <h2>Últimas Noticias del Huevo</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-icon">🎮</div>
+                    <h3>Nuevo juego anunciado</h3>
+                    <p>Rovio anuncia el desarrollo de un nuevo título de Angry Birds para 2024 con gráficos revolucionarios.</p>
+                    <span class="news-date">15 Mar 2024</span>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-icon">🎬</div>
+                    <h3>Película en producción</h3>
+                    <p>Se confirma que está en desarrollo una tercera película de Angry Birds con nuevos personajes.</p>
+                    <span class="news-date">10 Mar 2024</span>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-icon">🎉</div>
+                    <h3>Evento especial</h3>
+                    <p>Celebra el 15° aniversario de Angry Birds con eventos especiales y recompensas exclusivas.</p>
+                    <span class="news-date">5 Mar 2024</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 El Nido - Fan Page de Angry Birds. Todos los derechos reservados a Rovio Entertainment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

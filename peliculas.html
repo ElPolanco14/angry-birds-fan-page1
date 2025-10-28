@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Nido - Películas y Series</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animaciones.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="logo-container">
+            <h1 class="logo">El <span>Nido</span></h1>
+            <p class="tagline">Fan Page de Angry Birds</p>
+        </div>
+        
+        <nav>
+            <button class="nav-btn" onclick="navigateTo('inicio.html')">Inicio</button>
+            <button class="nav-btn" onclick="navigateTo('franquicia.html')">Franquicia</button>
+            <button class="nav-btn" onclick="navigateTo('curiosidades.html')">Curiosidades</button>
+            <button class="nav-btn active" onclick="navigateTo('peliculas.html')">Películas y Series</button>
+            <button class="nav-btn" onclick="navigateTo('juegos-especiales.html')">Juegos Especiales</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="movies-intro">
+            <h2>Películas y Series de Angry Birds</h2>
+            <p>El universo de Angry Birds se expandió más allá de los juegos con producciones animadas que encantaron a millones.</p>
+        </section>
+
+        <section class="movies-section">
+            <h2>Películas</h2>
+            
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-poster">
+                        <img src="images/movies/angry-birds-movie-1.jpg" alt="The Angry Birds Movie" onerror="handleImageError(this, 'movie1')">
+                    </div>
+                    <div class="media-info">
+                        <h3>The Angry Birds Movie (2016)</h3>
+                        <p><strong>Director:</strong> Clay Kaytis, Fergal Reilly</p>
+                        <p><strong>Duración:</strong> 97 minutos</p>
+                        <p><strong>Sinopsis:</strong> En una isla habitada por pájaros que no vuelan, Red, un pájaro con problemas de temperamento, Chuck, un veloz pájaro amarillo, y Bomb, un pájaro negro explosivo, se convierten en héroes improbables cuando unos misteriosos cerdos verdes llegan a la isla.</p>
+                        <p><strong>Curiosidad:</strong> La película explora el origen de por qué los pájaros están tan enojados con los cerdos.</p>
+                    </div>
+                </div>
+                
+                <div class="media-card">
+                    <div class="media-poster">
+                        <img src="images/movies/angry-birds-movie-2.jpg" alt="The Angry Birds Movie 2" onerror="handleImageError(this, 'movie2')">
+                    </div>
+                    <div class="media-info">
+                        <h3>The Angry Birds Movie 2 (2019)</h3>
+                        <p><strong>Director:</strong> Thurop Van Orman</p>
+                        <p><strong>Duración:</strong> 96 minutos</p>
+                        <p><strong>Sinopsis:</strong> Red, Chuck, Bomb y el resto de la bandada se alían con los cerdos para enfrentarse a una nueva amenaza: Zeta, un pájaro de la Isla Águila que planea conquistar su hogar.</p>
+                        <p><strong>Curiosidad:</strong> Introdujo nuevos personajes como Silver, la hermana superinteligente de Chuck.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="series-section">
+            <h2>Series Animadas</h2>
+            
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-poster series-poster">
+                        <div class="series-placeholder">
+                            <h3>Angry Birds Toons</h3>
+                            <p>2013-2016 • 104 episodios</p>
+                        </div>
+                    </div>
+                    <div class="media-info">
+                        <h3>Angry Birds Toons (2013-2016)</h3>
+                        <p><strong>Episodios:</strong> 104</p>
+                        <p><strong>Duración por episodio:</strong> 2-3 minutos</p>
+                        <p><strong>Sinopsis:</strong> Serie de cortos animados que expanden las aventuras de los pájaros y cerdos más allá del juego, mostrando su vida diaria en la isla.</p>
+                        <p><strong>Curiosidad:</strong> Originalmente se podía ver dentro de la aplicación de los juegos de Angry Birds.</p>
+                    </div>
+                </div>
+                
+                <div class="media-card">
+                    <div class="media-poster series-poster">
+                        <div class="series-placeholder">
+                            <h3>Angry Birds Stella</h3>
+                            <p>2014-2015 • 26 episodios</p>
+                        </div>
+                    </div>
+                    <div class="media-info">
+                        <h3>Angry Birds Stella (2014-2015)</h3>
+                        <p><strong>Episodios:</strong> 26</p>
+                        <p><strong>Duración por episodio:</strong> 3 minutos</p>
+                        <p><strong>Sinopsis:</strong> Serie spin-off centrada en Stella y sus amigas, mostrando aventuras con un enfoque más en la amistad y la colaboración.</p>
+                        <p><strong>Curiosidad:</strong> Fue la primera serie en presentar un elenco principalmente femenino en el universo de Angry Birds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 El Nido - Fan Page de Angry Birds. Todos los derechos reservados a Rovio Entertainment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

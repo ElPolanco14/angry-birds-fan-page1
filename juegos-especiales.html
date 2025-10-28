@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Nido - Juegos Especiales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animaciones.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="logo-container">
+            <h1 class="logo">El <span>Nido</span></h1>
+            <p class="tagline">Fan Page de Angry Birds</p>
+        </div>
+        
+        <nav>
+            <button class="nav-btn" onclick="navigateTo('inicio.html')">Inicio</button>
+            <button class="nav-btn" onclick="navigateTo('franquicia.html')">Franquicia</button>
+            <button class="nav-btn" onclick="navigateTo('curiosidades.html')">Curiosidades</button>
+            <button class="nav-btn" onclick="navigateTo('peliculas.html')">Películas y Series</button>
+            <button class="nav-btn active" onclick="navigateTo('juegos-especiales.html')">Juegos Especiales</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="special-games-intro">
+            <h2>Juegos Especiales y Ediciones Limitadas</h2>
+            <p>Además de la serie principal, Angry Birds ha tenido numerosas colaboraciones y ediciones especiales que expanden su universo.</p>
+        </section>
+
+        <section class="crossover-games">
+            <h2>Juegos Crossover</h2>
+            
+            <div class="special-games-grid">
+                <div class="special-game-card">
+                    <div class="game-cover">
+                        <img src="images/games/star-wars.jpg" alt="Angry Birds Star Wars" onerror="handleImageError(this, 'starwars')">
+                    </div>
+                    <div class="game-info">
+                        <h3>Angry Birds Star Wars (2012)</h3>
+                        <p><strong>Tipo:</strong> Crossover con Star Wars</p>
+                        <p><strong>Plataformas:</strong> Móviles, Consolas, PC</p>
+                        <p><strong>Descripción:</strong> Los pájaros y cerdos se transforman en personajes de Star Wars. Red es Luke Skywalker, los cerdos son stormtroopers, y la Estrella de la Muerte es el objetivo final.</p>
+                        <p><strong>Característica única:</strong> Introdujo el concepto de "Fuerza" que permite a los pájaros usar habilidades especiales basadas en la Fuerza de Star Wars.</p>
+                    </div>
+                </div>
+                
+                <div class="special-game-card">
+                    <div class="game-cover">
+                        <img src="images/games/transformers.jpg" alt="Angry Birds Transformers" onerror="handleImageError(this, 'transformers')">
+                    </div>
+                    <div class="game-info">
+                        <h3>Angry Birds Transformers (2014)</h3>
+                        <p><strong>Tipo:</strong> Crossover con Transformers</p>
+                        <p><strong>Plataformas:</strong> Móviles</p>
+                        <p><strong>Descripción:</strong> Los pájaros y cerdos se transforman en Autobirds y Deceptihogs en este juego de acción lateral con disparos automáticos.</p>
+                        <p><strong>Característica única:</strong> Cambió completamente la jugabilidad tradicional por un sistema de corredor automático con transformación entre modos pájaro y vehículo.</p>
+                    </div>
+                </div>
+                
+                <div class="special-game-card">
+                    <div class="game-cover">
+                        <img src="images/games/rio.jpg" alt="Angry Birds Rio" onerror="handleImageError(this, 'rio')">
+                    </div>
+                    <div class="game-info">
+                        <h3>Angry Birds Rio (2011)</h3>
+                        <p><strong>Tipo:</strong> Crossover con la película Rio</p>
+                        <p><strong>Plataformas:</strong> Móviles, PC</p>
+                        <p><strong>Descripción:</strong> Los pájaros son capturados y llevados a Río de Janeiro, donde se alían con personajes de la película Rio para escapar de los cerdos.</p>
+                        <p><strong>Característica única:</strong> Introdujo nuevos personajes y escenarios basados en la película, con mecánicas de juego únicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-editions">
+            <h2>Ediciones Especiales</h2>
+            
+            <div class="special-games-grid">
+                <div class="special-game-card">
+                    <div class="game-cover">
+                        <img src="images/games/go.jpg" alt="Angry Birds Go!" onerror="handleImageError(this, 'go')">
+                    </div>
+                    <div class="game-info">
+                        <h3>Angry Birds Go! (2013)</h3>
+                        <p><strong>Tipo:</strong> Carreras</p>
+                        <p><strong>Plataformas:</strong> Móviles</p>
+                        <p><strong>Descripción:</strong> Juego de carreras kart donde los personajes de Angry Birds compiten en la Isla Pájaro.</p>
+                        <p><strong>Característica única:</strong> Fue el primer juego de Angry Birds en un género completamente diferente al puzzle físico original.</p>
+                    </div>
+                </div>
+                
+                <div class="special-game-card">
+                    <div class="game-cover">
+                        <img src="images/games/bad-piggies.jpg" alt="Bad Piggies" onerror="handleImageError(this, 'piggies')">
+                    </div>
+                    <div class="game-info">
+                        <h3>Bad Piggies (2012)</h3>
+                        <p><strong>Tipo:</strong> Puzzle/Construcción</p>
+                        <p><strong>Plataformas:</strong> Móviles, PC</p>
+                        <p><strong>Descripción:</strong> Juego donde juegas como los cerdos, construyendo vehículos y máquinas para robar huevos.</p>
+                        <p><strong>Característica única:</strong> Cambia completamente la perspectiva, permitiendo jugar como los "villanos" de la serie principal.</p>
+                    </div>
+                </div>
+                
+                <div class="special-game-card">
+                    <div class="game-cover">
+                        <img src="images/games/dream-blast.jpg" alt="Angry Birds Dream Blast" onerror="handleImageError(this, 'dream')">
+                    </div>
+                    <div class="game-info">
+                        <h3>Angry Birds Dream Blast (2018)</h3>
+                        <p><strong>Tipo:</strong> Puzzle</p>
+                        <p><strong>Plataformas:</strong> Móviles</p>
+                        <p><strong>Descripción:</strong> Juego de puzzles con mecánicas de combinar burbujas del mismo color.</p>
+                        <p><strong>Característica única:</strong> Introduce un sistema de sueños donde los pájaros están atrapados en burbujas que deben ser liberadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 El Nido - Fan Page de Angry Birds. Todos los derechos reservados a Rovio Entertainment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Nido - Franquicia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animaciones.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="logo-container">
+            <h1 class="logo">El <span>Nido</span></h1>
+            <p class="tagline">Fan Page de Angry Birds</p>
+        </div>
+        
+        <nav>
+            <button class="nav-btn" onclick="navigateTo('inicio.html')">Inicio</button>
+            <button class="nav-btn active" onclick="navigateTo('franquicia.html')">Franquicia</button>
+            <button class="nav-btn" onclick="navigateTo('curiosidades.html')">Curiosidades</button>
+            <button class="nav-btn" onclick="navigateTo('peliculas.html')">Películas y Series</button>
+            <button class="nav-btn" onclick="navigateTo('juegos-especiales.html')">Juegos Especiales</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="history-section">
+            <h2>Historia de la Franquicia</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <p>Angry Birds nació en 2009 cuando la compañía finlandesa Rovio Entertainment decidió crear un juego simple pero adictivo para dispositivos móviles. El concepto era sencillo: usar una honda para lanzar pájaros contra estructuras que protegían a unos cerdos verdes que habían robado sus huevos.</p>
+                    
+                    <p>El éxito fue inmediato y masivo. En solo unos años, Angry Birds se convirtió en un fenómeno global, expandiéndose a múltiples plataformas, generando secuelas, spin-offs, merchandising, series animadas y películas.</p>
+                    
+                    <p>Lo que comenzó como un juego móvil se transformó en una de las franquicias de entretenimiento más exitosas del siglo XXI, con más de 4.500 millones de descargas en total.</p>
+                </div>
+                
+                <div class="history-image">
+                    <img src="images/misc/evolution.jpg" alt="Evolución de Angry Birds" onerror="handleImageError(this, 'evolution')">
+                </div>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <h2>Linea de Tiempo de Juegos</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2009</div>
+                    <div class="timeline-content">
+                        <h3>Angry Birds</h3>
+                        <p>El juego original que empezó todo. Lanzado primero para iOS, luego para Android y otras plataformas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h3>Angry Birds Seasons</h3>
+                        <p>Primer spin-off con niveles temáticos según festividades y estaciones del año.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2011</div>
+                    <div class="timeline-content">
+                        <h3>Angry Birds Rio</h3>
+                        <p>Crossover con la película Rio de Blue Sky Studios, introduciendo nuevos personajes y escenarios.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2012</div>
+                    <div class="timeline-content">
+                        <h3>Angry Birds Space</h3>
+                        <p>Revolucionó la física del juego introduciendo gravedad cero y campos gravitacionales.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2012</div>
+                    <div class="timeline-content">
+                        <h3>Bad Piggies</h3>
+                        <p>Spin-off donde juegas como los cerdos, construyendo vehículos para robar huevos.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>Angry Birds 2</h3>
+                        <p>Secuela principal con mejoras gráficas, sistema de vidas y nuevos personajes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-content">
+                        <h3>Angry Birds Action!</h3>
+                        <p>Juego de pinball con elementos de Angry Birds, vinculado a la película.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">
+                        <h3>Angry Birds Dream Blast</h3>
+                        <p>Juego de puzzles con mecánicas de combinar burbujas del mismo color.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tutorial-section">
+            <h2>Tutorial Básico</h2>
+            <div class="tutorial-steps">
+                <div class="tutorial-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Estira la Honda</h3>
+                        <p>Haz clic y mantén presionado sobre el pájaro, luego arrastra hacia atrás para estirar la honda.</p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Apunta con Precisión</h3>
+                        <p>Observa la trayectoria punteada para prever el camino del pájaro. Ajusta el ángulo según sea necesario.</p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Libera y Ataca</h3>
+                        <p>Suelta el clic para lanzar el pájaro. ¡Destruye las estructuras y elimina a todos los cerdos!</p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Usa Habilidades Especiales</h3>
+                        <p>Cada pájaro tiene una habilidad única. Toca la pantalla durante el vuelo para activarla en el momento adecuado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 El Nido - Fan Page de Angry Birds. Todos los derechos reservados a Rovio Entertainment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
